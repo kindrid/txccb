@@ -4,3 +4,14 @@
 __author__ = 'Trenton Broughton'
 __email__ = 'trenton@kindrid.com'
 __version__ = '0.1.0'
+
+
+from txccb import config, client
+
+
+def configure(url=None, username=None, password=None):
+    c = config.Config(url, username, password)
+    client.client.config = c
+    return client.client
+
+__all__ = ['configure', 'config', 'client']

@@ -11,23 +11,24 @@ Tests for `txccb` module.
 import os
 import treq
 import txccb
+from txccb import resources
 from twisted.trial import unittest
 from twisted.internet import defer, reactor
 from twisted.internet.tcp import Client
 from twisted.internet.task import deferLater
 
+url = os.environ.get('KINDRID_CCB_URL')
+username = os.environ.get('KINDRID_CCB_USER')
+password = os.environ.get('KINDRID_CCB_PASS')
+txccb.configure(url, username, password)
+
 
 class TestTxccb(unittest.TestCase):
 
     def setUp(self):
-        url = os.environ.get('KINDRID_CCB_URL')
-        username = os.environ.get('KINDRID_CCB_USER')
-        password = os.environ.get('KINDRID_CCB_PASS')
-        self.client = txccb.configure(url, username, password)
+        pass
 
     def tearDown(self):
-        self.client = None
-
         def _check_fds(_):
             # This appears to only be necessary for HTTPS tests.
             # For the normal HTTP tests then closeCachedConnections is
@@ -42,6 +43,6 @@ class TestTxccb(unittest.TestCase):
             return treq._utils.get_global_pool().closeCachedConnections().addBoth(_check_fds)
 
     @defer.inlineCallbacks
-    def test_transaction_detail_type_list(self):
-        out = yield self.client.transaction_detail_type_list()
+    def test_individual_search(self):
+        out = yield resources.Individual.search(phone="5551212")
         self.assertIsInstance(out, list)
