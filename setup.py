@@ -14,7 +14,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
 
-readme = open('README.rst').read()
+readme = open('README.md').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
@@ -31,7 +31,8 @@ setup(
     package_dir={'txccb': 'txccb'},
     include_package_data=True,
     install_requires=[
-        'twisted'
+        'treq',
+        'pyopenssl'
     ],
     license="BSD",
     zip_safe=False,
