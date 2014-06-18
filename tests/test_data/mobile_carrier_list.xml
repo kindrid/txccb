@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccb_api>
+     <request>
+          <parameters>
+               <argument value="mobile_carrier_list" name="srv"/>
+          </parameters>
+     </request>
+     <response>
+          <service>mobile_carrier_list</service>
+          <service_action>execute</service_action>
+          <availability>public</availability>
+          <mobile_carriers count="15">
+               <mobile_carrier id="1">
+                    <name>Alltel</name>
+                    <email>sms.alltelwireless.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="2">
+                    <name>AT&amp;T</name>
+                    <email>mms.att.net</email>
+               </mobile_carrier>
+               <mobile_carrier id="3">
+                    <name>Boost Mobile</name>
+                    <email>boostmobile.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="4">
+                    <name>Sprint</name>
+                    <email>messaging.sprintpcs.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="5">
+                    <name>T-Mobile</name>
+                    <email>tmomail.net</email>
+               </mobile_carrier>
+               <mobile_carrier id="6">
+                    <name>Verizon</name>
+                    <email>vtext.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="7">
+                    <name>Virgin Mobile (US)</name>
+                    <email>vmobl.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="8">
+                    <name>Rogers Wireless</name>
+                    <email>pcs.rogers.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="9">
+                    <name>Cricket</name>
+                    <email>sms.mycricket.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="10">
+                    <name>US Cellular</name>
+                    <email>email.uscc.net</email>
+               </mobile_carrier>
+               <mobile_carrier id="11">
+                    <name>Telus</name>
+                    <email>msg.telus.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="12">
+                    <name>Bell Mobility</name>
+                    <email>txt.bellmobility.ca</email>
+               </mobile_carrier>
+               <mobile_carrier id="13">
+                    <name>MetroPCS</name>
+                    <email>mymetropcs.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="14">
+                    <name>Centennial</name>
+                    <email>cwemail.com</email>
+               </mobile_carrier>
+               <mobile_carrier id="15">
+                    <name>Cellular South</name>
+                    <email>csouth1.com</email>
+               </mobile_carrier>
+          </mobile_carriers>
+     </response>
+</ccb_api>
