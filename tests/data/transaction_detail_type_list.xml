@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccb_api>
+     <request>
+          <parameters>
+               <argument value="transaction_detail_type_list" name="srv"/>
+          </parameters>
+     </request>
+     <response>
+          <service>transaction_detail_type_list</service>
+          <service_action>execute</service_action>
+          <availability>public</availability>
+          <transaction_detail_types count="52">
+               <transaction_detail_type id="1">
+                    <name>*Categories No Longer in Use</name>
+                    <cash_bank_account>10100</cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>45000000</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="2">
+                    <name>Building Fund - Old</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80100</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>7500000</pledge_goal>
+                    <parent id="1">*Categories No Longer in Use</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="3">
+                    <name>Missions - DNU</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80102</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>500000000</pledge_goal>
+                    <parent id="1">*Categories No Longer in Use</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="4">
+                    <name>Special Projects</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80104</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>400000</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="10">
+                    <name>Yth-Missions</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80106</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="11">
+                    <name>Yth-Activities</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80108</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="12">
+                    <name>Yth-Programs</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80110</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="13">
+                    <name>Mu-Programs</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80112</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="14">
+                    <name>Mu-Tours and Trips</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80114</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="15">
+                    <name>MI-General Missions</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80116</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="16">
+                    <name>Mi-Missionary Support</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="22">
+                    <name>New Fund - DNU</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80120</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>100000000</pledge_goal>
+                    <parent id="1">*Categories No Longer in Use</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="24">
+                    <name>Van Fund</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80122</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="27">
+                    <name>Yth - New Fund</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80124</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="28">
+                    <name>MI-Lowery Mission Support</name>
+                    <cash_bank_account>10200</cash_bank_account>
+                    <account_number>80126</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="37">
+                    <name>2008 Building</name>
+                    <cash_bank_account>80100</cash_bank_account>
+                    <account_number>10100</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="52">Building Fund</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="38">
+                    <name>Coffee Drinkers Fund</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>false</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="40">
+                    <name>2009 Building</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="52">Building Fund</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="42">
+                    <name>2009 Giving</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="1">*Categories No Longer in Use</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="44">
+                    <name>Missions</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>false</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="45">
+                    <name>reallylongcoanameandhowlongcan</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="1">*Categories No Longer in Use</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="47">
+                    <name>Midway Elem</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>2410</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="48">
+                    <name>Haiti Relief Fund</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>500000</pledge_goal>
+                    <parent id="50">Haiti Mission Trip 2010</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="49">
+                    <name>2010 Giving</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="51">General Giving</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="50">
+                    <name>Haiti Mission Trip 2010</name>
+                    <cash_bank_account>123456789</cash_bank_account>
+                    <account_number>1234</account_number>
+                    <tax_deductible>false</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>5000000</pledge_goal>
+                    <parent id="44">Missions</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="53">
+                    <name>2010 Building</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="52">Building Fund</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="51">
+                    <name>General Giving</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>1234590</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="52">
+                    <name>Building Fund</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="54">
+                    <name>Bookstore</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>4025</account_number>
+                    <tax_deductible>false</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="55">
+                    <name>--</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="56">
+                    <name>Care Ministry</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>2150</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="57">
+                    <name>Testing where it lands</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="51">General Giving</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="58">
+                    <name>Single Moms</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>2430</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="59">
+                    <name>General</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>850</account_number>
+                    <tax_deductible>false</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="60">
+                    <name>Test Delete</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="61">
+                    <name>Building Fund 2010-12</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>1265</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>2500000</pledge_goal>
+                    <parent id="52">Building Fund</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="62">
+                    <name>Guatemala</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="63">
+                    <name>Guatemala Well Project</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="62">Guatemala</parent>
+                    <campuses/>
+               </transaction_detail_type>
+               <transaction_detail_type id="64">
+                    <name>Family Ministry</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>301</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="65">
+                    <name>Sunday School Programs</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>301.1</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="64">Family Ministry</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="66">
+                    <name>Downtown Campus</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>555</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="2">Downtown Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="67">
+                    <name>Midtown</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="59">General</parent>
+                    <campuses>
+                         <campus id="3">Midtown Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="68">
+                    <name>Global Team</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>55555</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>true</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="69">
+                    <name>Annual Alumni Campaign</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>100000</pledge_goal>
+                    <parent id="59">General</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="70">
+                    <name>Pro_templo</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="71">
+                    <name>Ofrenda</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="72">
+                    <name>Pro-templo</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="51">General Giving</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="73">
+                    <name>New restriction for testing</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="74">
+                    <name>General Fund</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>TEST006</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="75">
+                    <name>Sz TEST child</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>1</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="76">
+                    <name>Tithe Sz Jr.</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number></account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id="13">Mu-Programs</parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+               <transaction_detail_type id="77">
+                    <name>Parolees</name>
+                    <cash_bank_account></cash_bank_account>
+                    <account_number>1</account_number>
+                    <tax_deductible>true</tax_deductible>
+                    <online_giving_enabled>false</online_giving_enabled>
+                    <pledge_goal>0</pledge_goal>
+                    <parent id=""></parent>
+                    <campuses>
+                         <campus id="1">Main Campus</campus>
+                         <campus id="2">Downtown Campus</campus>
+                         <campus id="3">Midtown Campus</campus>
+                         <campus id="4">Uptown Campus</campus>
+                         <campus id="5">C3Saskatoon</campus>
+                         <campus id="6">West Campus</campus>
+                    </campuses>
+               </transaction_detail_type>
+          </transaction_detail_types>
+     </response>
+</ccb_api>

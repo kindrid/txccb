@@ -19,24 +19,26 @@ class CCBClient(object):
         params['srv'] = service
         auth = (self.config.username, self.config.password)
         d = treq.request(method, self.config.url, params=params, auth=auth)
-        d.addCallback(self._get_content)
+        d.addCallback(self._get_content, params["srv"])
         return d
 
-    def _get_content(self, res):
+    def _get_content(self, res, srv):
         ''' Get the content from the response '''
         d = treq.content(res)
-        d.addCallback(self._parse_response)
+        d.addCallback(self._parse_response, srv)
         return d
 
-    def _parse_response(self, response):
+    def _parse_response(self, response, srv):
         ''' Parse the XML response from the server '''
+        with open("{}.xml".format(srv), "w") as fp:
+            fp.write(response)
         try:
             content = et.fromstring(response)
         except et.ParseError:
             raise errors.CCBError('Internal Error')
         response = content.find('response')
         if response.find('errors'):
-            error = response.find('errors')[0]
+            error = response.find('errors')[0][0]
             raise errors.CCBError(error.text, error.get('number'))
         return response
 

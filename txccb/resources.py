@@ -8,19 +8,47 @@ class Resource(object):
     _data = None
 
     def __init__(self):
-        if self._data:
-            for k, v in self._data.iteritems():
-                setattr(self, k, v)
+        if self._data is None:
+            self._data = {}
 
     def _set_data(self, data):
         for k, v in data.iteritems():
-            setattr(self, k, v)
+            if k in self._data:
+                self._data[k] = v
+
+    def __getattr__(self, key):
+        if key in self._data:
+            return self._data[key]
+        raise AttributeError(key)
+
+    @classmethod
+    def _parse(cls, response):
+        data = {}
+        if response.keys():
+            for k in response.keys():
+                data[k] = response.get(k)
+        for elem in response:
+            key = elem.tag
+            if elem.keys():
+                val = {}
+                for k in elem.keys():
+                    val[k] = elem.get(k)
+                val['value'] = elem.text
+            elif len(elem):
+                val = []
+                for i in elem:
+                    val.append(cls._parse(i))
+            else:
+                val = elem.text
+            data[key] = val
+        return data
 
 
 class Individual(Resource):
 
     def __init__(self):
         self._data = {
+            'id': None,
             'sync_id': None,
             'other_id': None,
             'giving_number': None,
@@ -79,7 +107,8 @@ class Individual(Resource):
         out = []
         for i in tlist:
             row = cls()
-            row._set_data({elem.tag: elem.text for elem in i})
+            data = cls._parse(i)
+            row._set_data(data)
             out.append(row)
         defer.returnValue(out)
 
@@ -88,12 +117,14 @@ class Individual(Resource):
     def find(cls, individual_id):
         fields = {"individual_id": individual_id}
         res = yield client._request("individual_search", params=fields)
+        # XXX Do stuff here
         defer.returnValue(res)
 
 
 class Gift(Resource):
     def __init__(self):
         self._data = {
+            "id": None,
             "coa_category_id": None,
             "individual_id": None,
             "amount": None,
@@ -114,3 +145,35 @@ class Gift(Resource):
         }
 
         Resource.__init__(self)
+
+
+class TransactionDetailType(Resource):
+
+    def __init__(self):
+        self._data = {
+            "id": None,
+            "name": None,
+            "cash_bank_account": None,
+            "account_number": None,
+            "tax_deductible": None,
+            "online_giving_enabled": None,
+            "pledge_goal": None,
+            "parent": None,
+            "campuses": None
+        }
+
+        Resource.__init__(self)
+
+    @classmethod
+    @defer.inlineCallbacks
+    def get_list(cls):
+        res = yield client._request("transaction_detail_type_list")
+        tlist = res.find("transaction_detail_types")
+        tlist = tlist.findall("transaction_detail_type")
+        out = []
+        for i in tlist:
+            row = cls()
+            data = cls._parse(i)
+            row._set_data(data)
+            out.append(row)
+        defer.returnValue(out)
