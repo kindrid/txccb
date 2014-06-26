@@ -21,6 +21,9 @@ class Resource(object):
             return self._data[key]
         raise AttributeError(key)
 
+    def __iter__(self):
+        return self._data.iteritems()
+
     @classmethod
     def _parse(cls, response):
         data = {}

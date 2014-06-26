@@ -22,23 +22,21 @@ class CCBClient(object):
         d.addCallback(self._get_content, params["srv"])
         return d
 
-    def _get_content(self, res, srv):
+    def _get_content(self, res, srv=None):
         ''' Get the content from the response '''
         d = treq.content(res)
         d.addCallback(self._parse_response, srv)
         return d
 
-    def _parse_response(self, response, srv):
+    def _parse_response(self, response, srv=None):
         ''' Parse the XML response from the server '''
-        with open("{}.xml".format(srv), "w") as fp:
-            fp.write(response)
         try:
             content = et.fromstring(response)
         except et.ParseError:
             raise errors.CCBError('Internal Error')
         response = content.find('response')
         if response.find('errors'):
-            error = response.find('errors')[0][0]
+            error = response.find('errors')[0]
             raise errors.CCBError(error.text, error.get('number'))
         return response
 
