@@ -14,11 +14,15 @@ class CCBClient(object):
         ''' Make the actual request '''
         if not self.config:
             raise errors.CCBError('Internal Error: No CCB configuration')
+        data = None
+        if method == "POST" and params:
+            data = params.copy()
+            params = None
         if not params:
             params = {}
         params['srv'] = service
         auth = (self.config.username, self.config.password)
-        d = treq.request(method, self.config.url, params=params, auth=auth)
+        d = treq.request(method, self.config.url, params=params, data=data, auth=auth)
         d.addCallback(self._get_content, params["srv"])
         return d
 

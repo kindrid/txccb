@@ -1,15 +1,19 @@
 ''' Resource objects '''
 
 from twisted.internet import defer
-from txccb.client import client
+from txccb.client import client as txclient
 
 
 class Resource(object):
     _data = None
 
-    def __init__(self):
+    def __init__(self, client=None):
         if self._data is None:
             self._data = {}
+        if client is None:
+            self.client = txclient
+        else:
+            self.client = client
 
     def _set_data(self, data):
         for k, v in data.iteritems():
@@ -103,7 +107,9 @@ class Individual(Resource):
 
     @classmethod
     @defer.inlineCallbacks
-    def search(cls, **fields):
+    def search(cls, client=None, **fields):
+        if not client:
+            client = txclient
         res = yield client._request("individual_search", params=fields)
         tlist = res.find('individuals')
         tlist = tlist.findall('individual')
@@ -117,7 +123,9 @@ class Individual(Resource):
 
     @classmethod
     @defer.inlineCallbacks
-    def find(cls, individual_id):
+    def find(cls, individual_id, client=None):
+        if not client:
+            client = txclient
         fields = {"individual_id": individual_id}
         res = yield client._request("individual_search", params=fields)
         # XXX Do stuff here
@@ -128,6 +136,7 @@ class Gift(Resource):
     def __init__(self):
         self._data = {
             "id": None,
+            "gift_id": None,
             "coa_category_id": None,
             "individual_id": None,
             "amount": None,
@@ -149,6 +158,30 @@ class Gift(Resource):
 
         Resource.__init__(self)
 
+    @classmethod
+    def create(cls, client=None, **fields):
+        if not client:
+            client = txclient
+        for i in ["coa_category_id", "individual_id", "amount"]:
+            if i not in fields:
+                raise KeyError("Missing requried key: {}".format(i))
+
+        d = client._request("online_giving_insert_gift", params=fields)
+
+        def _after(res):
+            tlist = res.find('items')
+            tlist = tlist.findall('item')
+            out = []
+            for i in tlist:
+                row = cls()
+                data = cls._parse(i)
+                row._set_data(data)
+                out.append(row)
+            return out
+
+        d.addCallback(_after)
+        return d
+
 
 class TransactionDetailType(Resource):
 
@@ -169,7 +202,9 @@ class TransactionDetailType(Resource):
 
     @classmethod
     @defer.inlineCallbacks
-    def get_list(cls):
+    def get_list(cls, client=None):
+        if not client:
+            client = txclient
         res = yield client._request("transaction_detail_type_list")
         tlist = res.find("transaction_detail_types")
         tlist = tlist.findall("transaction_detail_type")

@@ -7,7 +7,7 @@ __version__ = '0.1.0'
 
 
 from txccb import config, client
-from txccb.resources import Gift, Individual
+from txccb.resources import Gift, Individual, TransactionDetailType
 
 
 def configure(url=None, username=None, password=None):
@@ -15,4 +15,7 @@ def configure(url=None, username=None, password=None):
     client.client.config = c
     return client.client
 
-__all__ = ['configure', 'config', 'client', 'resources', 'Gift', 'Individual']
+__all__ = [
+    'configure', 'config', 'client', 'resources', 'Gift',
+    'Individual', 'TransactionDetailType'
+]
