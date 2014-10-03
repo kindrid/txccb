@@ -39,6 +39,8 @@ class CCBClient(object):
         except et.ParseError:
             raise errors.CCBError('Internal Error')
         response = content.find('response')
+        if not response:
+            raise errors.CCBError("No response received")
         if response.find('errors'):
             error = response.find('errors')[0]
             raise errors.CCBError(error.text, error.get('number'))
