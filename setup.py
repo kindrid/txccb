@@ -19,7 +19,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='txccb',
-    version='0.1.0',
+    version='0.1.1',
     description='Twisted CCB Integration',
     long_description=readme + '\n\n' + history,
     author='Trenton Broughton',
