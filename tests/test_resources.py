@@ -85,3 +85,13 @@ class TestTxccb(unittest.TestCase):
             out = yield resources.TransactionDetailType.get_list()
         self.assertIsInstance(out, list)
         self.assertEqual(len(out), 52)
+
+    @defer.inlineCallbacks
+    def test_create_receipt(self):
+        fields = {
+            "individual_id": 2646,
+            "coa_category_id": 4,
+            "amount": 40.25
+        }
+        r = yield txccb.Gift.create(**fields)
+        print r[0].gift_id
