@@ -145,6 +145,7 @@ class Gift(Resource):
             "merchant_authorization_code": None,
             "merchant_process_date": None,
             "merchant_notes": None,
+            "transaction_date": None,
             "first_name": None,
             "last_name": None,
             "street_address": None,
