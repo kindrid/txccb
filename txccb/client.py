@@ -40,7 +40,10 @@ class CCBClient(object):
             raise errors.CCBError('Internal Error')
         response = content.find('response')
         if not response:
-            raise errors.CCBError("No response received")
+            error = content.find("error")
+            if error is not None:
+                raise errors.CCBError(error.text, error.get("number"))
+            raise errors.CCBError("No response received", "-1")
         if response.find('errors'):
             error = response.find('errors')[0]
             raise errors.CCBError(error.text, error.get('number'))
